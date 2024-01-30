@@ -1,0 +1,15 @@
+version: '3'
+services:
+  console-helloworld:
+    image: helloworld
+    build: ./helloworld
+  my_nginx:
+    image: my_nginx
+    build: ./my_nginx
+    ports:
+      - '8081:80'
+  tic_tac_toe:
+    image: my_ttt
+    build: ./tic_tac_toe
+    ports:
+      - '3002:3000'
